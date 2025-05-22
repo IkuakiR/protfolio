@@ -23,12 +23,24 @@
     list-style: none;
 }
 
-.navLink {
+.navHeading,
+.worksLink {
     font-size: 2rem;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 18px;
+}
+
+.worksLink {
+    font-size: 1.8rem;
+}
+
+.nowAt {
+    background-color: #81b71b;
+    color: #f8f8f8;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
 .switcher {
@@ -48,7 +60,19 @@
         text-align: center;
         line-height: 50px;
         margin-bottom: 10px;
+
+        &:hover {
+            background-color: #81b71b;
+            color: #f8f8f8;
+        }
     }
+}
+
+
+.switchBtn.worksBtn {
+    color: #f8f8f8;
+    background-color: #81b71b;
+    border: none;
 }
 
 .sidebarLeft {
@@ -74,38 +98,10 @@
     border-bottom: 1px solid #9c9c9c;
 }
 
-.hello {
-    position: relative;
-}
-
-.headline,
-.subtext {
-    position: absolute;
-    color: #fff;
-}
-
-.headline {
-    font-size: 3rem;
-    top: 80px;
-    left: 50px;
-}
-
-.subtext {
-    font-size: 2.4rem;
-    top: 130px;
-    left: 50px;
-    line-height: 4rem;
-}
-
-.mainBg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-.projectContainer {
-    padding: 10px 15px;
+.aboutWork,
+.highlights,
+.reviewPoints {
+    padding: 15px 15px;
     border-bottom: 1px solid #9c9c9c;
 
     .projectHeader {
@@ -117,7 +113,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             text-align: center;
             line-height: 1;
             width: 40px;
@@ -128,7 +124,7 @@
         }
 
         .projectTitle {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             line-height: 4rem;
 
         }
@@ -138,15 +134,31 @@
         display: flex;
         margin-top: 20px;
         gap: 20px;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         align-items: center;
         line-height: 1.5;
+
+        .highlightsText {
+            .title {
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+        }
+
+        .highlightsText p {
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+
+        .phoneThumb {
+            width: 15%;
+            height: auto;
+        }
     }
 
     .responsiveThumb {
         width: 50%;
         height: auto;
-        max-height: 300px;
         box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.25);
     }
 
@@ -174,10 +186,24 @@
         background-color: #f0f0f0;
     }
 
-    .detailLink {
-        font-size: 1.4rem;
-        color: #81b71b;
+    .projectLink {
+        display: flex;
+        height: 1.6rem;
+        font-size: 1.6rem;
+        align-items: center;
+        gap: 15px;
     }
+
+    .projectLink a {
+        text-decoration: underline;
+    }
+
+    .projectLink span {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
 }
 
 .sidebarRight {

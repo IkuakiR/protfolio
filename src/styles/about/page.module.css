@@ -23,12 +23,24 @@
     list-style: none;
 }
 
-.navLink {
+.navHeading,
+.aboutLink {
     font-size: 2rem;
     font-weight: 600;
     display: flex;
     align-items: center;
     gap: 18px;
+}
+
+.aboutLink {
+    font-size: 1.8rem;
+}
+
+.nowAt {
+    background-color: #81b71b;
+    color: #f8f8f8;
+    padding: 8px 12px;
+    border-radius: 8px;
 }
 
 .switcher {
@@ -48,7 +60,19 @@
         text-align: center;
         line-height: 50px;
         margin-bottom: 10px;
+
+        &:hover {
+            background-color: #81b71b;
+            color: #f8f8f8;
+        }
     }
+}
+
+
+.switchBtn.worksBtn {
+    color: #f8f8f8;
+    background-color: #81b71b;
+    border: none;
 }
 
 .sidebarLeft {
@@ -74,41 +98,14 @@
     border-bottom: 1px solid #9c9c9c;
 }
 
-.hello {
-    position: relative;
-}
 
-.headline,
-.subtext {
-    position: absolute;
-    color: #fff;
-}
-
-.headline {
-    font-size: 3rem;
-    top: 80px;
-    left: 50px;
-}
-
-.subtext {
-    font-size: 2.4rem;
-    top: 130px;
-    left: 50px;
-    line-height: 4rem;
-}
-
-.mainBg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-.projectContainer {
-    padding: 10px 15px;
+.aboutIntro,
+.myVision,
+.myBelief {
+    padding: 15px 15px;
     border-bottom: 1px solid #9c9c9c;
 
-    .projectHeader {
+    .aboutHeader {
         display: flex;
         gap: 10px;
 
@@ -117,7 +114,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             text-align: center;
             line-height: 1;
             width: 40px;
@@ -127,57 +124,49 @@
             background-color: #81b71b;
         }
 
-        .projectTitle {
+        .aboutTitle {
             font-size: 1.6rem;
             line-height: 4rem;
 
         }
     }
 
-    .projectBody {
+    .aboutBody {
         display: flex;
         margin-top: 20px;
         gap: 20px;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         align-items: center;
         line-height: 1.5;
+
+        .introList {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .aboutContent {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 1.6rem;
+                list-style: none;
+                margin-bottom: 15px;
+            }
+        }
     }
 
     .responsiveThumb {
-        width: 50%;
+        width: 35%;
         height: auto;
-        max-height: 300px;
-        box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.25);
+        background-color: #fff;
+        padding: 16px;
+        padding-bottom: 48px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow:
+            inset 0 4px 8px rgba(0, 0, 0, 0.1),
+            0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .tools {
-        margin-top: 8px;
-    }
-
-    .tools h3 {
-        font-size: 1.4rem;
-        font-weight: medium;
-    }
-
-    .techList {
-        display: flex;
-        gap: 12px;
-    }
-
-    .techList li {
-        font-size: 1.4rem;
-        list-style: none;
-        padding: 5px 10px;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        border-radius: 20px;
-        background-color: #f0f0f0;
-    }
-
-    .detailLink {
-        font-size: 1.4rem;
-        color: #81b71b;
-    }
 }
 
 .sidebarRight {
@@ -185,49 +174,6 @@
     min-width: 200px;
     max-width: 350px;
     padding: 24px;
-}
-
-.aboutCard {
-    width: 100%;
-    height: 370px;
-    border-radius: 15px;
-    border: 1px solid #9c9c9c;
-    padding: 10px 15px;
-
-    .profile {
-        display: flex;
-        justify-content: left;
-        align-items: end;
-        gap: 16px;
-
-        .name {
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-    }
-
-    .aboutList {
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        .aboutContent {
-            display: flex;
-            gap: 8px;
-            font-size: 1.8rem;
-            list-style: none;
-            margin-bottom: 15px;
-        }
-    }
-
-    .moreProfile {
-        font-size: 1.8rem;
-        color: #81b71b;
-    }
-}
-
-.aboutCard h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
 }
 
 .contactCard {
@@ -238,13 +184,10 @@
     margin-top: 20px;
     padding: 10px 15px;
 
-    .contactContent {
-        display: flex;
-        align-items: center;
+    .contactList li {
         font-size: 1.8rem;
         list-style: none;
         margin-bottom: 15px;
-        gap: 8px;
     }
 }
 
@@ -256,4 +199,11 @@
 .navMenu li {
     font-size: 2rem;
     list-style: none;
+}
+
+.motto {
+    color: #e63946;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
